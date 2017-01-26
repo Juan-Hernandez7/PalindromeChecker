@@ -16,9 +16,19 @@ public void setup()
 }
 public boolean palindrome(String word)
 {
+   String rek = word.toLowerCase();
+  String nek= new String();
+ for(int i =0; i< word.length();i++)
+  {
+    if(Character.isLetter(word.charAt(i))==true)
+    {
+      nek= nek + rek.charAt(i);
+    
+    }
+  }
 
  
-  if(word.equals(reverse(word)))
+  if(nek.equals(reverse(word)))
   {
     return true;
   }
@@ -26,13 +36,23 @@ public boolean palindrome(String word)
   return false;
 }
 public String reverse(String str)
-{    
-  
-    String sNew = new String();
-  int tex= str.length()-1;
-  for(int i= tex; i>=0; i--)
+{    String tek = str.toLowerCase();
+  String kek= new String();
+ for(int i =0; i< str.length();i++)
   {
-   sNew= sNew + str.charAt(i);
+    if(Character.isLetter(str.charAt(i))==true)
+    {
+      kek= kek + tek.charAt(i);
+    
+    }
+  }
+
+    String sNew = new String();
+  int meek= kek.length()-1;
+  for(int i= meek; i>=0; i--)
+  {
+   sNew= sNew + kek.charAt(i);
+   
   }
 
     //your code here
